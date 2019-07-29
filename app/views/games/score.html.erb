@@ -4,10 +4,10 @@
 <p>Time taken to answer:</p>
 
 
-<p><%= Time.now - Time.parse(cookies[:time_start]) %></p>
+<p><%= time = Time.now - Time.parse(cookies[:time_start]) %></p>
 <p>Your score:</p>
-<p><%= @score %></p>
+<p><%= time > 30 ? 0 : (@score * time ** -2) * 1000 %></p>
 
 
-
+<a href="/new">Play again</a>
 

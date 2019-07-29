@@ -20,7 +20,7 @@ class GamesController < ApplicationController
   	  @score += word["word"].length
   	end
   	word_array = word['word'].scan /\w/
-  	match = word_array.any? { |i| word_array.include? i }
+  	match = word_array.all? { |i| cookies[:@grid].include? i }
   	if match
   	  @score += 3
   	else
