@@ -1,0 +1,19 @@
+<% require 'time' %>
+
+<h1>Welcome to the longest word game!</h1>
+<p>Here is your grid:</p>
+
+<div style="display: flex">
+  <% cookies[:@grid].each do |letter| %>
+  	<p><%= letter %> <p>
+  <% end %>
+</div>
+<% cookies[:@grid] %>
+
+<form action="/score" method="get">
+  <input type="text" name="answer" placeholder="What is your longest word?">
+  <input type="submit">
+</form>
+
+
+

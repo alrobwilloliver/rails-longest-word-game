@@ -1,0 +1,13 @@
+<h1>Look at your score</h1>
+<h2>Your word:</h2>
+<p><%= @answer %></p>
+<p>Time taken to answer:</p>
+
+
+<p><%= Time.now - Time.parse(cookies[:time_start]) %></p>
+<p>Your score:</p>
+<p><%= @score %></p>
+
+
+
+
